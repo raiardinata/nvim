@@ -54,6 +54,10 @@ return {
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
       automatic_installation = true,
+<<<<<<< HEAD
+=======
+      automatic_setup = true,
+>>>>>>> 741d7d3 (add rustaceanvim config)
 
       -- You can provide additional configuration to the handlers,
       -- see mason-nvim-dap README for more information
@@ -64,6 +68,7 @@ return {
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
+        'codelldb',
       },
     }
 
@@ -106,11 +111,36 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install golang specific config
+<<<<<<< HEAD
     require('dap-go').setup {
       delve = {
         -- On Windows delve must be run attached or it crashes.
         -- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
         detached = vim.fn.has 'win32' == 0,
+=======
+    require('dap-go').setup()
+
+    dap.adapters.codelldb = {
+      type = 'server',
+      port = '${port}',
+      executable = {
+        -- Change this to your path!
+        command = '/home/raiardinata/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb',
+        args = { '--port', '${port}' },
+      },
+    }
+
+    dap.configurations.rust = {
+      {
+        name = 'Launch file',
+        type = 'codelldb',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+>>>>>>> 741d7d3 (add rustaceanvim config)
       },
     }
   end,
