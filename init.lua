@@ -416,7 +416,11 @@ require('lazy').setup({
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
+<<<<<<< HEAD
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+=======
+      'williamboman/mason.nvim',
+>>>>>>> eebb247 (update with master)
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -782,6 +786,7 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
 <<<<<<< HEAD
+<<<<<<< HEAD
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -794,6 +799,13 @@ require('lazy').setup({
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
 >>>>>>> 741d7d3 (add rustaceanvim config)
+=======
+    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    init = function()
+>>>>>>> eebb247 (update with master)
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
@@ -849,7 +861,11 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
+<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+=======
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+>>>>>>> eebb247 (update with master)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -868,6 +884,7 @@ require('lazy').setup({
       require('nvim-treesitter.install').prefer_git = true
       ---@diagnostic disable-next-line: missing-fields
 <<<<<<< HEAD
+<<<<<<< HEAD
       require('nvim-treesitter.configs').setup(opts)
 =======
       require('nvim-treesitter.configs').setup {
@@ -878,6 +895,9 @@ require('lazy').setup({
         indent = { enable = true },
       }
 >>>>>>> 741d7d3 (add rustaceanvim config)
+=======
+      require('nvim-treesitter.configs').setup(opts)
+>>>>>>> eebb247 (update with master)
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
@@ -900,9 +920,12 @@ require('lazy').setup({
   require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
+<<<<<<< HEAD
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+=======
+>>>>>>> eebb247 (update with master)
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
