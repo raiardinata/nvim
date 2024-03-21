@@ -23,20 +23,19 @@ return {
 
     vim.g.rustaceanvim = {
       -- Plugin configuration
-      tools = {},
+      tools = {
+        hover_actions = {
+          auto_focus = true,
+        },
+      },
       -- LSP configuration
       server = {
         on_attach = function()
           -- you can also put keymaps in here
 
-          vim.keymap.set('n', '<leader>k', function()
+          vim.keymap.set('n', 'K', function()
             vim.cmd.RustLsp { 'hover', 'actions' }
           end, { buffer = bufnr })
-
-          vim.keymap.set('n', '<leader>a', function()
-            vim.cmd.RustLsp 'codeAction' -- supports rust-analyzer's grouping
-            -- or vim.lsp.buf.codeAction() if you don't want grouping.
-          end, { silent = true, buffer = bufnr })
         end,
         default_settings = {
           -- rust-analyzer language server configuration
