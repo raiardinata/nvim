@@ -5,5 +5,13 @@ return {
     -- See `:help ibl`
     main = 'ibl',
     opts = {},
+    config = function()
+      require('ibl').setup {
+        indent = {
+          char = '│',
+          tab_char = '│',
+        },
+      }
+    end,
   },
 }

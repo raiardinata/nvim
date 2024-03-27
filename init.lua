@@ -565,6 +565,25 @@ require('lazy').setup({
             },
           },
         },
+
+        pyright = {
+          capabilities = capabilities,
+          filetypes = { 'python' },
+        },
+
+        taplo = {
+          capabilities = capabilities,
+        },
+
+        ruff_lsp = {
+          settings = {
+            organizeImports = false,
+          },
+          -- disable ruff as hover provider to avoid conflicts with pyright
+          on_attach = function(client)
+            client.server_capabilities.hoverProvider = false
+          end,
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -615,7 +634,8 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        python = { 'isort', 'black' },
+        markdown = { 'inject' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
@@ -830,7 +850,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
