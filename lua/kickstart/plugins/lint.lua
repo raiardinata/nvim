@@ -58,3 +58,7 @@ return {
     end,
   },
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e64b3d4 (add some plugin)
