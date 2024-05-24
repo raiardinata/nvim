@@ -1,6 +1,7 @@
 return {
   'mrcjkb/rustaceanvim',
   version = '^4', -- Recommended
+  lazy = false,
   ft = { 'rust' },
 
   config = function()
@@ -29,7 +30,7 @@ return {
       },
       -- LSP configuration
       server = {
-        on_attach = function()
+        on_attach = function(client, bufnr)
           -- you can also put keymaps in here
         end,
         default_settings = {
