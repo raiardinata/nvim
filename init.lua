@@ -627,7 +627,7 @@ require('lazy').setup({
       --    :Mason
       --
       --  You can press `g?` for help in this menu.
-      require("mason").setup()
+      require('mason').setup()
 
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
@@ -978,6 +978,8 @@ require('lazy').setup({
     },
   },
 })
+
+require 'custom.remaps_and_sets'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

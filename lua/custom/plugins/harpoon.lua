@@ -11,24 +11,24 @@ return {
     -- REQUIRED
 
     vim.keymap.set('n', '<leader>a', function()
-      harpoon:list():append()
-    end, { desc = 'Assign current file into Harppon.' })
+      harpoon:list():add()
+    end)
     vim.keymap.set('n', '<C-e>', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end, { desc = 'Toogle Harpoon Quick Menu.' })
+    end)
 
     vim.keymap.set('n', '<C-h>', function()
       harpoon:list():select(1)
-    end, { desc = 'Toogle to Harpoon quick slot 1.' })
+    end)
     vim.keymap.set('n', '<C-t>', function()
       harpoon:list():select(2)
-    end, { desc = 'Toogle to Harpoon quick slot 2.' })
+    end)
     vim.keymap.set('n', '<C-n>', function()
       harpoon:list():select(3)
-    end, { desc = 'Toogle to Harpoon quick slot 3.' })
+    end)
     vim.keymap.set('n', '<C-s>', function()
       harpoon:list():select(4)
-    end, { desc = 'Toogle to Harpoon quick slot 4.' })
+    end)
 
     -- Toggle previous & next buffers stored within Harpoon list
     vim.keymap.set('n', '<C-S-P>', function()
