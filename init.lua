@@ -90,13 +90,8 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-<<<<<<< HEAD
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
-=======
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
->>>>>>> 741d7d3 (add rustaceanvim config)
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -461,11 +456,7 @@ require('lazy').setup({
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
-<<<<<<< HEAD
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-=======
-      'williamboman/mason.nvim',
->>>>>>> eebb247 (update with master)
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -866,27 +857,11 @@ require('lazy').setup({
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
     --
-<<<<<<< HEAD
-<<<<<<< HEAD
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-=======
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
->>>>>>> 741d7d3 (add rustaceanvim config)
-=======
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'rose-pine/neovim',
     name = 'rose-pine',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
->>>>>>> eebb247 (update with master)
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
@@ -946,6 +921,7 @@ require('lazy').setup({
     opts = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
 =======
 =======
@@ -962,6 +938,9 @@ require('lazy').setup({
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
 >>>>>>> ef75e8e (add auto format buffer)
 >>>>>>> 1a29886 (add auto format buffer)
+=======
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+>>>>>>> 3231426 (add some remaps)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -987,21 +966,7 @@ require('lazy').setup({
       -- Prefer git instead of curl in order to improve connectivity in some environments
       require('nvim-treesitter.install').prefer_git = true
       ---@diagnostic disable-next-line: missing-fields
-<<<<<<< HEAD
-<<<<<<< HEAD
       require('nvim-treesitter.configs').setup(opts)
-=======
-      require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'go', 'rust' },
-        -- Autoinstall languages that are not installed
-        auto_install = true,
-        highlight = { enable = true },
-        indent = { enable = true },
-      }
->>>>>>> 741d7d3 (add rustaceanvim config)
-=======
-      require('nvim-treesitter.configs').setup(opts)
->>>>>>> eebb247 (update with master)
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
@@ -1025,12 +990,9 @@ require('lazy').setup({
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-<<<<<<< HEAD
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-=======
->>>>>>> eebb247 (update with master)
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

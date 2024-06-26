@@ -54,10 +54,6 @@ return {
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
       automatic_installation = true,
-<<<<<<< HEAD
-=======
-      automatic_setup = true,
->>>>>>> 741d7d3 (add rustaceanvim config)
 
       -- You can provide additional configuration to the handlers,
       -- see mason-nvim-dap README for more information
@@ -78,81 +74,19 @@ return {
       -- Set icons to characters that are more likely to work in every terminal.
       --    Feel free to remove or use ones that you like more! :)
       --    Don't feel like these are good choices.
+      icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
       controls = {
-        element = 'repl',
-        enabled = true,
         icons = {
-          disconnect = '',
-          pause = '',
-          play = '',
-          run_last = '',
-          step_back = '',
-          step_into = '',
-          step_out = '',
-          step_over = '',
-          terminate = '',
+          pause = '⏸',
+          play = '▶',
+          step_into = '⏎',
+          step_over = '⏭',
+          step_out = '⏮',
+          step_back = 'b',
+          run_last = '▶▶',
+          terminate = '⏹',
+          disconnect = '⏏',
         },
-      },
-      element_mappings = {},
-      expand_lines = true,
-      floating = {
-        border = 'single',
-        mappings = {
-          close = { 'q', '<Esc>' },
-        },
-      },
-      force_buffers = true,
-      icons = {
-        collapsed = '',
-        current_frame = '',
-        expanded = '',
-      },
-      layouts = {
-        {
-          elements = {
-            {
-              id = 'scopes',
-              size = 0.25,
-            },
-            {
-              id = 'breakpoints',
-              size = 0.25,
-            },
-            {
-              id = 'stacks',
-              size = 0.25,
-            },
-            {
-              id = 'watches',
-              size = 0.25,
-            },
-          },
-          position = 'left',
-          size = 40,
-        },
-        {
-          elements = { {
-            id = 'repl',
-            size = 0.5,
-          }, {
-            id = 'console',
-            size = 0.5,
-          } },
-          position = 'bottom',
-          size = 10,
-        },
-      },
-      mappings = {
-        edit = 'e',
-        expand = { '<CR>', '<2-LeftMouse>' },
-        open = 'o',
-        remove = 'd',
-        repl = 'r',
-        toggle = 't',
-      },
-      render = {
-        indent = 1,
-        max_value_lines = 100,
       },
     }
 
@@ -173,14 +107,13 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install golang specific config
-<<<<<<< HEAD
     require('dap-go').setup {
       delve = {
         -- On Windows delve must be run attached or it crashes.
         -- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
         detached = vim.fn.has 'win32' == 0,
-=======
-    require('dap-go').setup()
+      },
+    }
 
     dap.adapters.codelldb = {
       type = 'server',
@@ -202,7 +135,6 @@ return {
         end,
         cwd = '${workspaceFolder}',
         stopOnEntry = false,
->>>>>>> 741d7d3 (add rustaceanvim config)
       },
     }
   end,
