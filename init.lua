@@ -882,10 +882,14 @@ require('lazy').setup({
     build = ':TSUpdate',
     opts = {
 <<<<<<< HEAD
+<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
 =======
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
 >>>>>>> eebb247 (update with master)
+=======
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+>>>>>>> ef75e8e (add auto format buffer)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
