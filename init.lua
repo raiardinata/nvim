@@ -417,10 +417,14 @@ require('lazy').setup({
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
 <<<<<<< HEAD
+<<<<<<< HEAD
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
 =======
       'williamboman/mason.nvim',
 >>>>>>> eebb247 (update with master)
+=======
+      { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+>>>>>>> f525a35 (cleansing)
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -883,6 +887,7 @@ require('lazy').setup({
     opts = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
 =======
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
@@ -890,6 +895,9 @@ require('lazy').setup({
 =======
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
 >>>>>>> ef75e8e (add auto format buffer)
+=======
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+>>>>>>> f525a35 (cleansing)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -945,11 +953,17 @@ require('lazy').setup({
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
 <<<<<<< HEAD
+<<<<<<< HEAD
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 =======
 >>>>>>> eebb247 (update with master)
+=======
+  -- require 'kickstart.plugins.autopairs',
+  -- require 'kickstart.plugins.neo-tree',
+  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+>>>>>>> f525a35 (cleansing)
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
