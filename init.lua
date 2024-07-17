@@ -945,14 +945,23 @@ require('lazy').setup({
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
 <<<<<<< HEAD
+<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
 =======
+=======
+>>>>>>> 1a29886 (add auto format buffer)
 <<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
 =======
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
 >>>>>>> eebb247 (update with master)
+<<<<<<< HEAD
 >>>>>>> f307908 (update with master)
+=======
+=======
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+>>>>>>> ef75e8e (add auto format buffer)
+>>>>>>> 1a29886 (add auto format buffer)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
