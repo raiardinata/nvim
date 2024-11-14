@@ -651,16 +651,6 @@ require('lazy').setup({
           capabilities = capabilities,
         },
 
-        ruff_lsp = {
-          settings = {
-            organizeImports = false,
-          },
-          -- disable ruff as hover provider to avoid conflicts with pyright
-          on_attach = function(client)
-            client.server_capabilities.hoverProvider = false
-          end,
-        },
-
         html = {
           capabilities = capabilities,
         },
@@ -923,32 +913,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
-=======
-=======
->>>>>>> 1a29886 (add auto format buffer)
-<<<<<<< HEAD
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
-=======
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
->>>>>>> eebb247 (update with master)
-<<<<<<< HEAD
->>>>>>> f307908 (update with master)
-=======
-=======
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
->>>>>>> ef75e8e (add auto format buffer)
->>>>>>> 1a29886 (add auto format buffer)
-=======
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
->>>>>>> 3231426 (add some remaps)
-=======
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'c_sharp' },
->>>>>>> 1a18341 (cleansing 2.1)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -960,30 +925,12 @@ require('lazy').setup({
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
-<<<<<<< HEAD
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
     --
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-=======
-    config = function(_, opts)
-      -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-
-      -- Prefer git instead of curl in order to improve connectivity in some environments
-      require('nvim-treesitter.install').prefer_git = true
-      ---@diagnostic disable-next-line: missing-fields
-      require('nvim-treesitter.configs').setup(opts)
-
-      -- There are additional nvim-treesitter modules that you can use to interact
-      -- with nvim-treesitter. You should go explore a few and see what interests you:
-      --
-      --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-      --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-      --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-    end,
->>>>>>> 9467613 (add rustaceanvim config)
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
@@ -1006,17 +953,12 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-<<<<<<< HEAD
   -- { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
-=======
-  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  { import = 'custom.plugins' },
->>>>>>> 9467613 (add rustaceanvim config)
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
