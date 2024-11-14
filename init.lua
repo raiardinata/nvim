@@ -660,6 +660,10 @@ require('lazy').setup({
             client.server_capabilities.hoverProvider = false
           end,
         },
+
+        html = {
+          capabilities = capabilities,
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -866,7 +870,7 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.cmd.colorscheme 'rose-pine'
-      vim.cmd.hi 'normal guibg=black guifg=white'
+      vim.cmd.hi 'normal guibg=none guifg=white'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
@@ -922,6 +926,7 @@ require('lazy').setup({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
 =======
 =======
@@ -941,6 +946,9 @@ require('lazy').setup({
 =======
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
 >>>>>>> 3231426 (add some remaps)
+=======
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'c_sharp' },
+>>>>>>> 1a18341 (cleansing 2.1)
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {

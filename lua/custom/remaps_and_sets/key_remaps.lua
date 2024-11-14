@@ -9,4 +9,7 @@ return {
   vim.keymap.set('n', 'J', 'mzJ`z'),
   vim.keymap.set('n', '<C-d>', '<C-d>zz'),
   vim.keymap.set('n', '<C-u>', '<C-u>zz'),
+
+  vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('v', '<Tab>', '>gv', { noremap = true, silent = true }),
 }
