@@ -694,7 +694,7 @@ require('lazy').setup({
         -- vue 3
         volar = {
           capabilities = capabilities,
-          filetype = { 'vue', 'html' },
+          filetypes = { 'vue', 'typescript', 'javascript', 'javascriptreact', 'typescriptreact' },
           init_options = {
             vue = {
               hybridMode = false,
@@ -756,10 +756,16 @@ require('lazy').setup({
           },
         },
 
+        jsonls = {
+          capabilities = capabilities,
+        },
+
+        -- HTML
         html = {
           capabilities = capabilities,
         },
 
+        -- C#
         omnisharp = {
           capabilities = capabilities,
           cmd = { 'dotnet', vim.fn.stdpath 'data' .. '/mason/packages/omnisharp/libexec/OmniSharp.dll' },
@@ -814,7 +820,7 @@ require('lazy').setup({
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
-        ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+        ensure_installed = { 'ts_ls', 'volar', 'omnisharp', 'html', 'jsonls' }, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
         handlers = {
           function(server_name)
@@ -1065,7 +1071,25 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'typescript',
+        'javascript',
+        'vue',
+        'c_sharp',
+        'json',
+        'proto',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
